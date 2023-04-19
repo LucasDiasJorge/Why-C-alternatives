@@ -34,4 +34,25 @@
     }
     ```
 
-Neste exemplo, o programador declara um ponteiro "ptr" e o inicializa com um valor nulo. No entanto, o código tenta atribuir o valor 5 ao endereço de memória apontado por "ptr", que é nulo. Isso pode levar a falhas de segurança, como falhas de segmentação.
+    Neste exemplo, o programador declara um ponteiro "ptr" e o inicializa com um valor nulo. No entanto, o código tenta atribuir o valor 5 ao endereço de memória apontado por "ptr", que é nulo. Isso pode levar a falhas de segurança, como falhas de segmentação.
+
+3. Declaração vazia de variável :
+
+    ```c
+    #include <stdio.h>
+
+    int main() {
+
+        int x;
+        if (x == 0) {
+            printf("x é zero\n");
+        } else {
+            printf("x não é zero\n");
+        }
+    
+        return 0;
+    }
+    ```
+
+
+    Neste exemplo, o programador declara uma variável "x" sem inicializá-la. Em seguida, o código verifica se "x" é igual a zero, mas como "x" não foi inicializado com nenhum valor, ele pode conter qualquer valor na memória, o que pode levar a comportamentos inesperados e vulnerabilidades de segurança
